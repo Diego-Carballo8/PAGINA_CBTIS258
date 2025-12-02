@@ -1,0 +1,437 @@
+// Career Data
+const careersData = {
+    programacion: {
+        title: "💻 Programación",
+        description: "Desarrolla aplicaciones web, móviles y de escritorio usando lenguajes modernos como Python, Java, JavaScript, C# y PHP. Domina frameworks como React, Angular, Django y Laravel. Aprende programación orientada a objetos, patrones de diseño, bases de datos SQL y NoSQL, desarrollo full-stack, metodologías ágiles y control de versiones con Git.",
+        skills: [
+            "Programación en múltiples lenguajes (Python, Java, C++, JavaScript)",
+            "Desarrollo web frontend con HTML5, CSS3, React y Vue.js",
+            "Backend con Node.js, Express, Django y Spring Boot",
+            "Diseño y administración de bases de datos (MySQL, MongoDB, PostgreSQL)",
+            "Desarrollo de aplicaciones móviles nativas e híbridas",
+            "Programación de videojuegos con Unity y Unreal Engine",
+            "DevOps, Docker, contenedores y cloud computing"
+        ],
+        projects: [
+            "Sistema de punto de venta completo con facturación electrónica",
+            "App móvil de delivery con geolocalización en tiempo real",
+            "Red social funcional con chat en tiempo real usando WebSockets",
+            "E-commerce con carrito de compras, pagos en línea y gestión de inventario",
+            "Sistema de reservaciones para hoteles y restaurantes",
+            "Plataforma educativa tipo Classroom con videollamadas integradas",
+            "API REST para aplicaciones empresariales con autenticación JWT",
+            "Videojuego 2D/3D con física, colisiones y sistema de puntuación",
+            "Bot de trading automático con análisis de mercado",
+            "Sistema de control escolar con reportes y estadísticas"
+        ],
+        field: "Desarrollador web, programador móvil, ingeniero de software, analista de sistemas, desarrollador full-stack, game developer."
+    },
+    mecanica: {
+        title: "⚙️ Mecánica Industrial",
+        description: "Domina el mantenimiento de maquinaria industrial, sistemas de transmisión de potencia, manufactura avanzada y procesos de producción. Especialízate en mecanizado CNC, soldadura especializada, diseño mecánico asistido por computadora (CAD/CAM), control de calidad, metalurgia, neumática e hidráulica industrial para la industria 4.0.",
+        skills: [
+            "Operación de torno, fresadora, taladro y máquinas CNC",
+            "Soldadura SMAW, GMAW (MIG), GTAW (TIG) y oxiacetileno",
+            "Diseño mecánico en AutoCAD, SolidWorks e Inventor",
+            "Mantenimiento preventivo, predictivo y correctivo",
+            "Lectura e interpretación de planos técnicos",
+            "Sistemas neumáticos e hidráulicos industriales",
+            "Metrología y control de calidad dimensional",
+            "Tratamientos térmicos y propiedades de materiales"
+        ],
+        projects: [
+            "Fabricación de piezas mecánicas en torno y fresadora manual",
+            "Mecanizado CNC con programación G-code y M-code",
+            "Soldadura de estructuras metálicas y tuberías industriales",
+            "Diseño y manufactura de moldes y troqueles",
+            "Banco de pruebas de motores y sistemas de transmisión",
+            "Montaje y alineación de maquinaria pesada",
+            "Circuitos neumáticos e hidráulicos automatizados",
+            "Plan de mantenimiento para planta industrial",
+            "Análisis de fallas mecánicas con microscopía",
+            "Optimización de procesos de manufactura"
+        ],
+        field: "Técnico en mantenimiento industrial, operador CNC, soldador certificado, supervisor de producción, diseñador mecánico, inspector de calidad."
+    },
+    alimentos: {
+        title: "🍽️ Alimentos y Bebidas",
+        description: "Aprende procesamiento industrial de alimentos, conservación, control de calidad sanitaria e inocuidad alimentaria con estándares internacionales. Desarrolla habilidades en análisis fisicoquímicos y microbiológicos, desarrollo de nuevos productos, manejo de sistemas HACCP, certificaciones TIF, ISO 22000, buenas prácticas de manufactura y normativas sanitarias mexicanas (NOM).",
+        skills: [
+            "Análisis fisicoquímicos (pH, acidez, humedad, proteínas, grasas)",
+            "Análisis microbiológicos (bacterias, hongos, levaduras)",
+            "Procesamiento térmico (pasteurización, esterilización, ultrapasteurización)",
+            "Tecnologías de conservación (congelación, deshidratación, liofilización)",
+            "Formulación y desarrollo de productos alimenticios",
+            "Sistemas de gestión de calidad e inocuidad (HACCP, ISO)",
+            "Control de procesos en la industria alimentaria",
+            "Normatividad sanitaria mexicana e internacional"
+        ],
+        projects: [
+            "Elaboración de yogurt, quesos frescos y madurados",
+            "Producción de helados artesanales y postres lácteos",
+            "Fabricación de embutidos (salchicha, chorizo, jamón)",
+            "Conservas de frutas (mermeladas, jaleas, frutas en almíbar)",
+            "Procesamiento de vegetales (encurtidos, salsas, aderezos)",
+            "Elaboración de productos de panadería y repostería",
+            "Bebidas fermentadas y no alcohólicas",
+            "Análisis de vida útil de productos alimenticios",
+            "Implementación de sistema HACCP en planta piloto",
+            "Desarrollo de producto innovador desde cero"
+        ],
+        field: "Técnico en control de calidad, analista de laboratorio, supervisor de producción alimentaria, inspector sanitario, desarrollador de productos."
+    },
+    soporte: {
+        title: "🖥️ Soporte y Mantenimiento",
+        description: "Especialízate en mantenimiento preventivo y correctivo de equipos de cómputo, infraestructura de redes empresariales y sistemas operativos modernos. Domina diagnóstico avanzado de hardware, configuración de servidores Windows Server y Linux, virtualización con VMware y VirtualBox, ciberseguridad, backup, recovery, administración de Active Directory y soluciones en la nube.",
+        skills: [
+            "Ensamble, configuración y optimización de computadoras",
+            "Diagnóstico y reparación de hardware (motherboards, RAM, HDD, SSD)",
+            "Instalación y configuración de Windows, Linux y macOS",
+            "Diseño e implementación de redes LAN y WAN",
+            "Cableado estructurado categoría 6 y fibra óptica",
+            "Configuración de routers, switches y firewalls",
+            "Administración de servidores y virtualización",
+            "Seguridad informática y protección antivirus"
+        ],
+        projects: [
+            "Ensamble de PCs gaming y estaciones de trabajo profesionales",
+            "Instalación de red empresarial con 50+ equipos",
+            "Configuración de servidor Windows con Active Directory",
+            "Montaje de servidor web LAMP (Linux, Apache, MySQL, PHP)",
+            "Implementación de sistema de respaldos automáticos",
+            "Configuración de VPN para trabajo remoto seguro",
+            "Instalación de cámaras de seguridad IP en red",
+            "Migración de datos entre sistemas operativos",
+            "Auditoría de seguridad y hardening de sistemas",
+            "Soporte técnico remoto con TeamViewer y AnyDesk"
+        ],
+        field: "Técnico en soporte IT, administrador de redes, especialista en help desk, ingeniero de infraestructura, técnico de campo, consultor tecnológico."
+    },
+    contabilidad: {
+        title: "💼 Contabilidad",
+        description: "Domina el registro contable, procesos fiscales, gestión financiera y auditoría de empresas comerciales, industriales y de servicios. Conviértete en un profesional capaz de manejar las finanzas de cualquier organización, elaborar estados financieros, calcular impuestos federales y estatales, realizar auditorías internas, utilizar software contable especializado (CONTPAQi, Aspel, SAP) y aplicar las Normas de Información Financiera (NIF).",
+        skills: [
+            "Registro de operaciones contables con partida doble",
+            "Elaboración de estados financieros (Balance, Estado de Resultados, Flujo de Efectivo)",
+            "Cálculo de impuestos (ISR, IVA, IMSS, Infonavit, nóminas)",
+            "Contabilidad electrónica y facturación digital (CFDI 4.0)",
+            "Auditoría interna y externa de procesos contables",
+            "Análisis financiero e indicadores de rentabilidad",
+            "Costos de producción y punto de equilibrio",
+            "Presupuestos empresariales y proyecciones financieras"
+        ],
+        projects: [
+            "Estados financieros completos de empresa comercial e industrial",
+            "Declaraciones mensuales y anuales ante SAT",
+            "Cálculo de nóminas con prestaciones de ley y PTU",
+            "Sistema de costeo para empresa manufacturera",
+            "Auditoría interna de registros contables",
+            "Análisis financiero con razones de liquidez y rentabilidad",
+            "Plan de negocios con proyección financiera 5 años",
+            "Conciliaciones bancarias y control de efectivo",
+            "Presupuesto maestro (ventas, producción, compras)",
+            "Implementación de software contable empresarial"
+        ],
+        field: "Contador general, auxiliar contable, analista financiero, auditor interno, consultor fiscal, asesor de nóminas, controller financiero."
+    },
+    hospedaje: {
+        title: "🏨 Hospedaje",
+        description: "Prepárate en administración hotelera de lujo, gestión de servicios turísticos de alta calidad, atención al cliente premium y operación de establecimientos de hospedaje. Desarrolla habilidades en operación de hoteles, resorts, moteles, hostales, gestión de ingresos (revenue management), sistemas de reservaciones (PMS), marketing turístico, organización de eventos MICE, estándares AAA y Five Diamond, así como certificaciones de calidad internacional.",
+        skills: [
+            "Operación de recepción y sistemas PMS (Opera, Cloudbeds)",
+            "Técnicas de housekeeping y limpieza profesional",
+            "Servicio al cliente de excelencia y manejo de quejas",
+            "Revenue management y estrategias de precios",
+            "Organización de eventos corporativos y sociales",
+            "Administración de alimentos y bebidas en hoteles",
+            "Inglés turístico y atención a huéspedes internacionales",
+            "Normatividad turística y estándares de calidad"
+        ],
+        projects: [
+            "Gestión completa de reservaciones y check-in/out express",
+            "Plan de limpieza y control de calidad de habitaciones",
+            "Organización de boda completa (200+ invitados)",
+            "Evento corporativo con coffee break y servicios",
+            "Atención de huéspedes VIP y servicios de concierge",
+            "Estrategia de marketing digital para hotel",
+            "Auditoría nocturna y cierre de caja de recepción",
+            "Manual de procedimientos operativos de hotel",
+            "Menú de room service y carta de restaurante",
+            "Plan de negocios para hostal boutique"
+        ],
+        field: "Recepcionista de hotel, supervisor de housekeeping, coordinador de eventos, gerente de operaciones, revenue manager, concierge, wedding planner."
+    },
+    robotica: {
+        title: "🤖 Robótica",
+        description: "Diseña, programa, construye y mantiene sistemas robóticos inteligentes y de automatización industrial avanzada para la Industria 4.0. Domina mecatrónica, electrónica de potencia, programación de microcontroladores (Arduino, Raspberry Pi, ESP32), sensores y actuadores, visión artificial, control automático, robótica móvil, brazos manipuladores, PLCs Siemens y Allen-Bradley, Internet de las Cosas (IoT) y manufactura inteligente.",
+        skills: [
+            "Programación de microcontroladores (Arduino, PIC, ESP32)",
+            "Diseño de circuitos electrónicos y PCBs",
+            "Control de motores DC, servos, motores a pasos y BLDC",
+            "Programación de PLCs y sistemas SCADA",
+            "Visión artificial con OpenCV y procesamiento de imágenes",
+            "Robótica móvil con navegación autónoma (SLAM)",
+            "Diseño 3D y manufactura aditiva (impresión 3D)",
+            "Internet de las Cosas (IoT) y comunicación M2M"
+        ],
+        projects: [
+            "Robot seguidor de línea con sensores infrarrojos",
+            "Brazo robótico de 6 grados de libertad controlado por joystick",
+            "Drone cuadricóptero con estabilización automática",
+            "Robot móvil con navegación autónoma y evasión de obstáculos",
+            "Sistema de visión artificial para clasificación de objetos",
+            "Línea de ensamble automatizada con bandas transportadoras",
+            "Robot aspiradora inteligente con mapeo de entorno",
+            "Invernadero automatizado con sensores IoT",
+            "Vehículo autónomo con control remoto por WiFi",
+            "Brazo robótico industrial para pick and place"
+        ],
+        field: "Técnico en robótica, programador de PLCs, ingeniero de automatización, técnico en mantenimiento de robots, desarrollador IoT, especialista en Industria 4.0."
+    },
+    ia: {
+        title: "🧠 Inteligencia Artificial",
+        description: "Domina machine learning, deep learning, análisis de datos masivos (Big Data), redes neuronales artificiales y desarrollo de soluciones inteligentes innovadoras. Aprende Python avanzado, TensorFlow, PyTorch, scikit-learn, procesamiento de lenguaje natural (NLP), visión por computadora, algoritmos genéticos, minería de datos, ciencia de datos, IA generativa y técnicas avanzadas de IA para resolver problemas complejos del mundo real.",
+        skills: [
+            "Programación avanzada en Python y librerías científicas",
+            "Algoritmos de machine learning (supervisado, no supervisado, refuerzo)",
+            "Redes neuronales profundas (CNN, RNN, LSTM, Transformers)",
+            "Procesamiento de lenguaje natural (NLP) y chatbots",
+            "Visión por computadora y reconocimiento de imágenes",
+            "Análisis de datos con Pandas, NumPy y visualización",
+            "Despliegue de modelos en producción (MLOps)",
+            "IA generativa (GPT, DALL-E, Stable Diffusion)"
+        ],
+        projects: [
+            "Modelo de reconocimiento facial con CNN y OpenCV",
+            "Chatbot conversacional con GPT y procesamiento NLP",
+            "Sistema de recomendación tipo Netflix con filtrado colaborativo",
+            "Detector de fraudes bancarios con machine learning",
+            "Clasificador de imágenes médicas para diagnóstico",
+            "Análisis de sentimientos en redes sociales con Twitter API",
+            "Predicción de precios de acciones con LSTM",
+            "Asistente virtual por voz con reconocimiento de habla",
+            "Generador de arte con IA (Stable Diffusion)",
+            "Sistema de visión para vehículos autónomos"
+        ],
+        field: "Data scientist, ingeniero de machine learning, analista de IA, desarrollador de chatbots, especialista en NLP, científico de datos, ingeniero MLOps."
+    }
+};
+
+// Test Vocacional
+let selectedInterests = new Set();
+
+document.addEventListener('DOMContentLoaded', function() {
+    const testCards = document.querySelectorAll('.test-card');
+    // Si la página no contiene tarjetas del test, no hacemos nada
+    if (testCards && testCards.length > 0) {
+        testCards.forEach(card => {
+            card.addEventListener('click', function() {
+                this.classList.toggle('selected');
+                updateRecommendations();
+            });
+        });
+    }
+});
+
+function updateRecommendations() {
+    const selectedCards = document.querySelectorAll('.test-card.selected');
+    const resultsDiv = document.getElementById('testResults');
+    const careersDiv = document.getElementById('recommendedCareers');
+    // Si no existe la sección de resultados del test omitimos la ejecución
+    if (!resultsDiv || !careersDiv) return;
+    const allSkills = new Set();
+    
+    selectedCards.forEach(card => {
+        const skills = card.dataset.skills.split(',');
+        skills.forEach(skill => allSkills.add(skill));
+    });
+    
+    if (allSkills.size === 0) {
+        document.getElementById('testResults').style.display = 'none';
+        return;
+    }
+    
+    const careerMapping = {
+        'programacion': 'Programación',
+        'mecanica': 'Mecánica Industrial',
+        'alimentos': 'Alimentos y Bebidas',
+        'soporte': 'Soporte y Mantenimiento',
+        'contabilidad': 'Contabilidad',
+        'hospedaje': 'Hospedaje',
+        'robotica': 'Robótica',
+        'ia': 'Inteligencia Artificial'
+    };
+    
+    const recommendations = Array.from(allSkills).map(skill => careerMapping[skill]);
+    
+    // resultsDiv y careersDiv ya definidos arriba
+    
+    careersDiv.innerHTML = recommendations.map(career => 
+        `<div style="background: var(--primary-red); color: white; padding: 1rem; margin: 0.5rem; border-radius: 8px; display: inline-block; font-weight: bold;">
+            ${career}
+        </div>`
+    ).join('');
+    
+    resultsDiv.style.display = 'block';
+    resultsDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+// Career Modal Functions
+function openCareerModal(careerKey) {
+    const career = careersData[careerKey];
+    const modal = document.getElementById('careerModal');
+    const content = document.getElementById('careerModalContent');
+    
+    content.innerHTML = `
+        <div class="career-header">
+            <h2>${career.title}</h2>
+        </div>
+        
+        <div class="career-description">
+            <p>${career.description}</p>
+        </div>
+        
+        <div class="career-section">
+            <h3>🎯 Competencias que desarrollarás:</h3>
+            <ul>
+                ${career.skills.map(skill => `<li>${skill}</li>`).join('')}
+            </ul>
+        </div>
+        
+        <div class="career-section">
+            <h3>🚀 Proyectos que realizarás:</h3>
+            <ul>
+                ${career.projects.map(project => `<li>${project}</li>`).join('')}
+            </ul>
+        </div>
+        
+        <div class="career-field">
+            <strong>💼 Campo laboral:</strong>
+            <p>${career.field}</p>
+        </div>
+    `;
+    
+    modal.classList.add('active');
+}
+
+function closeCareerModal() {
+    document.getElementById('careerModal').classList.remove('active');
+}
+
+// Login Modal Functions
+function openLoginModal() {
+    document.getElementById('loginModal').classList.add('active');
+}
+
+function closeLoginModal() {
+    document.getElementById('loginModal').classList.remove('active');
+    document.getElementById('loginForm').reset();
+    hideErrors();
+}
+
+function hideErrors() {
+    document.getElementById('controlError').style.display = 'none';
+    document.getElementById('emailError').style.display = 'none';
+}
+
+// Form Validation
+function handleLogin(event) {
+    event.preventDefault();
+    hideErrors();
+
+    const controlNumber = document.getElementById('controlNumber').value;
+    const email = document.getElementById('email').value;
+
+    let isValid = true;
+
+    // Validate control number (8 digits)
+    const controlPattern = /^\d{8}$/;
+    if (!controlPattern.test(controlNumber)) {
+        document.getElementById('controlError').style.display = 'block';
+        isValid = false;
+    }
+
+    // Validate email domain
+    const emailPattern = /^[a-zA-Z0-9._-]+@cbtis258\.edu\.mx$/;
+    if (!emailPattern.test(email)) {
+        document.getElementById('emailError').style.display = 'block';
+        isValid = false;
+    }
+
+    if (isValid) {
+        alert('¡Inicio de sesión exitoso!\n\n' +
+              'Número de Control: ' + controlNumber + '\n' +
+              'Correo: ' + email + '\n\n' +
+              'Bienvenido al Portal Estudiantil CBTis 258');
+        closeLoginModal();
+    }
+}
+
+// Close modal on outside click
+document.addEventListener('click', function(event) {
+    if (event.target.id === 'careerModal') {
+        closeCareerModal();
+    }
+    if (event.target.id === 'loginModal') {
+        closeLoginModal();
+    }
+});
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeCareerModal();
+        closeLoginModal();
+    }
+});
+
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'start' 
+            });
+        }
+    });
+});
+
+// Real-time validation feedback
+document.addEventListener('DOMContentLoaded', function() {
+    const controlInput = document.getElementById('controlNumber');
+    const emailInput = document.getElementById('email');
+    
+    if (controlInput) {
+        controlInput.addEventListener('input', function(e) {
+            const value = e.target.value;
+            const errorElement = document.getElementById('controlError');
+            
+            if (value.length > 0 && !/^\d{8}$/.test(value)) {
+                errorElement.style.display = 'block';
+                e.target.style.borderColor = '#D32F2F';
+            } else {
+                errorElement.style.display = 'none';
+                e.target.style.borderColor = '#DDD';
+            }
+        });
+    }
+    
+    if (emailInput) {
+        emailInput.addEventListener('input', function(e) {
+            const value = e.target.value;
+            const errorElement = document.getElementById('emailError');
+            const emailPattern = /^[a-zA-Z0-9._-]+@cbtis258\.edu\.mx$/;
+            
+            if (value.length > 0 && !emailPattern.test(value)) {
+                errorElement.style.display = 'block';
+                e.target.style.borderColor = '#D32F2F';
+            } else {
+                errorElement.style.display = 'none';
+                e.target.style.borderColor = '#DDD';
+            }
+        });
+    }
+});
