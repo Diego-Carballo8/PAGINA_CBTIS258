@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBTis 258 - Centro de Bachillerato Tecnológico</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header con Banner -->
+    <div class="header-banner">
+        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1200&h=400&fit=crop" alt="Estudiantes CBTis">
+        <div class="banner-overlay">
+            <div class="banner-content">
+                <h1>CBTis 258</h1>
+                <p>Formando profesionales técnicos de excelencia</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="logo-section">
+                <div class="logo">CB</div>
+                <div class="school-info">
+                    <h2>CBTis 258</h2>
+                    <p>Centro de Bachillerato Tecnológico Industrial y de Servicios</p>
+                </div>
+            </div>
+            <button class="login-btn" onclick="openLoginModal()">Portal Estudiantil</button>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="test.html#test-vocacional">Test Vocacional</a></li>
+                <li><a href="#oferta">Oferta Educativa</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <h2>Formando el Futuro Tecnológico</h2>
+        <p>Excelencia académica y preparación profesional</p>
+        <a href="test.html#test-vocacional" class="cta-button">¿No sabes qué carrera elegir? Haz nuestro test</a>
+    </section>
+
+    <!-- Test Vocacional movido a test.html -->
+
+    <!-- Oferta Educativa -->
+    <section class="section" id="oferta">
+        <h2 class="section-title">Oferta Educativa</h2>
+        <p class="section-subtitle">Haz clic en cualquier carrera para ver información completa</p>
+        <div class="cards">
+            <!-- Programación -->
+            <div class="card career-card" onclick="openCareerModal('programacion')">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=250&fit=crop" alt="Programación">
+                </div>
+                <h3>💻 Programación</h3>
+                <p>Desarrolla aplicaciones web, móviles y de escritorio.</p>
+                <button class="card-btn">Ver más información →</button>
+            </div>
+
+            <!-- Mecánica Industrial -->
+            <div class="card career-card" onclick="openCareerModal('mecanica')">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=250&fit=crop" alt="Mecánica Industrial">
+                </div>
+                <h3>⚙️ Mecánica Industrial</h3>
+                <p>Domina el mantenimiento de maquinaria y manufactura.</p>
+                <button class="card-btn">Ver más información →</button>
+            </div>
+
+            <!-- Alimentos y Bebidas -->
+            <div class="card career-card" onclick="openCareerModal('alimentos')">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=400&h=250&fit=crop" alt="Alimentos y Bebidas">
+                </div>
+                <h3>🍽️ Alimentos y Bebidas</h3>
+                <p>Procesamiento y control de calidad alimentaria.</p>
+                <button class="card-btn">Ver más información →</button>
+            </div>
+
+            <!-- Soporte -->
+            <div class="card career-card" onclick="openCareerModal('soporte')">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=400&h=250&fit=crop" alt="Soporte">
+                </div>
+                <h3>🖥️ Soporte y Mantenimiento</h3>
+                <p>Especialízate en redes y equipos de cómputo.</p>
+                <button class="card-btn">Ver más información →</button>
+            </div>
+
+            <!-- Contabilidad -->
+            <div class="card career-card" onclick="openCareerModal('contabilidad')">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=400&h=250&fit=crop" alt="Contabilidad">
+                </div>
+                <h3>💼 Contabilidad</h3>
+                <p>Gestión financiera y procesos fiscales.</p>
+                <button class="card-btn">Ver más información →</button>
+            </div>
+
+            <!-- Hospedaje -->
+            <div class="card career-card" onclick="openCareerModal('hospedaje')">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&h=250&fit=crop" alt="Hospedaje">
+                </div>
+                <h3>🏨 Hospedaje</h3>
+                <p>Administración hotelera y turismo.</p>
+                <button class="card-btn">Ver más información →</button>
+            </div>
+
+            <!-- Robótica -->
+            <div class="card career-card" onclick="openCareerModal('robotica')">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=400&h=250&fit=crop" alt="Robótica">
+                </div>
+                <h3>🤖 Robótica</h3>
+                <p>Diseña y programa sistemas robóticos.</p>
+                <button class="card-btn">Ver más información →</button>
+            </div>
+
+            <!-- IA -->
+            <div class="card career-card" onclick="openCareerModal('ia')">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=250&fit=crop" alt="Inteligencia Artificial">
+                </div>
+                <h3>🧠 Inteligencia Artificial</h3>
+                <p>Machine learning y análisis de datos.</p>
+                <button class="card-btn">Ver más información →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section class="section" id="servicios">
+        <h2 class="section-title">Servicios Estudiantiles</h2>
+        <div class="cards services-cards">
+            <div class="card service-card">
+                <div class="service-icon">📚</div>
+                <h3>Biblioteca Digital</h3>
+                <p>Acceso 24/7 a más de 5,000 recursos educativos en línea, bases de datos especializadas como EBSCO y ProQuest, e-books, revistas científicas y material bibliográfico actualizado. Préstamo de laptops y tablets para uso académico.</p>
+                <div class="service-features">
+                    <span class="feature-tag">5,000+ recursos</span>
+                    <span class="feature-tag">Acceso 24/7</span>
+                    <span class="feature-tag">Préstamo de equipos</span>
+                </div>
+            </div>
+
+            <div class="card service-card">
+                <div class="service-icon">🏋️</div>
+                <h3>Actividades Deportivas</h3>
+                <p>Instalaciones de primer nivel: canchas de fútbol soccer y rápido, basquetbol, voleibol y gimnasio completamente equipado. Talleres deportivos gratuitos de 15+ disciplinas, competencias interescolares y equipos representativos con entrenadores certificados.</p>
+                <div class="service-features">
+                    <span class="feature-tag">Gimnasio equipado</span>
+                    <span class="feature-tag">15+ deportes</span>
+                    <span class="feature-tag">Torneos</span>
+                </div>
+            </div>
+
+            <div class="card service-card">
+                <div class="service-icon">💡</div>
+                <h3>Tutorías Académicas</h3>
+                <p>Apoyo personalizado completamente gratuito con profesores especializados en todas las materias. Asesorías individuales y grupales, círculos de estudio, preparación para exámenes extraordinarios y apoyo en proyectos. Horarios flexibles matutinos y vespertinos.</p>
+                <div class="service-features">
+                    <span class="feature-tag">Gratuito</span>
+                    <span class="feature-tag">Todas las materias</span>
+                    <span class="feature-tag">Horario flexible</span>
+                </div>
+            </div>
+
+            <div class="card service-card">
+                <div class="service-icon">🔬</div>
+                <h3>Laboratorios Especializados</h3>
+                <p>12 laboratorios equipados con tecnología de punta: cómputo con 200+ PCs, química analítica, electrónica, mecánica con tornos CNC, alimentos con equipos industriales, idiomas multimedia y talleres de manufactura. Acceso en horario de clases y prácticas libres.</p>
+                <div class="service-features">
+                    <span class="feature-tag">12 laboratorios</span>
+                    <span class="feature-tag">Tecnología actual</span>
+                    <span class="feature-tag">Prácticas libres</span>
+                </div>
+            </div>
+
+            <div class="card service-card">
+                <div class="service-icon">🎓</div>
+                <h3>Orientación Vocacional</h3>
+                <p>Asesoría profesional personalizada por psicólogos educativos para elegir tu carrera universitaria ideal. Aplicación de tests psicométricos, talleres de desarrollo personal, habilidades socioemocionales, técnicas de estudio y preparación intensiva para exámenes de admisión UANL, UDEM y más.</p>
+                <div class="service-features">
+                    <span class="feature-tag">Psicólogos</span>
+                    <span class="feature-tag">Tests vocacionales</span>
+                    <span class="feature-tag">Prep. exámenes</span>
+                </div>
+            </div>
+
+            <div class="card service-card">
+                <div class="service-icon">💼</div>
+                <h3>Bolsa de Trabajo</h3>
+                <p>Vinculación directa con más de 50 empresas del sector industrial, tecnológico y de servicios. Facilita prácticas profesionales remuneradas, ofertas laborales exclusivas para estudiantes y egresados, ferias de empleo trimestrales, talleres de CV y entrevistas, y seguimiento de egresados.</p>
+                <div class="service-features">
+                    <span class="feature-tag">50+ empresas</span>
+                    <span class="feature-tag">Prácticas pagadas</span>
+                    <span class="feature-tag">Ferias empleo</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="section" id="contacto">
+        <h2 class="section-title">Contacto</h2>
+        <div class="contact-info">
+            <p><strong>📍 Dirección:</strong> Ciudad Apodaca, Nuevo León, México</p>
+            <p><strong>📧 Email:</strong> contacto@cbtis258.edu.mx</p>
+            <p><strong>📞 Teléfono:</strong> (81) XXXX-XXXX</p>
+            <p><strong>🕒 Horario:</strong> Lunes a Viernes, 7:00 AM - 3:00 PM</p>
+        </div>
+    </section>
+
+    <!-- Modal de Carrera -->
+    <div class="modal" id="careerModal">
+        <div class="modal-content modal-large">
+            <button class="close-btn" onclick="closeCareerModal()">✕</button>
+            <div id="careerModalContent"></div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeLoginModal()">✕</button>
+            <h2 class="modal-title">Portal Estudiantil</h2>
+            <form id="loginForm" onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label for="controlNumber">Número de Control</label>
+                    <input 
+                        type="text" 
+                        id="controlNumber" 
+                        placeholder="Ej: 20240001"
+                        required
+                    >
+                    <span class="error" id="controlError">Número de control inválido (8 dígitos)</span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Institucional</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        placeholder="ejemplo@cbtis258.edu.mx"
+                        required
+                    >
+                    <span class="error" id="emailError">Debe usar correo @cbtis258.edu.mx</span>
+                </div>
+                <button type="submit" class="submit-btn">Iniciar Sesión</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 CBTis 258 - Centro de Bachillerato Tecnológico Industrial y de Servicios</p>
+        <p>Ciudad Apodaca, Nuevo León, México</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
