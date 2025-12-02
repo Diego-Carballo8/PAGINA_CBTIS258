@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBTis 258 - Perfiles de Egreso</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <h1>CBTis 258</h1>
+        <nav>
+            <a href="index.html#inicio">Inicio</a>
+            <a href="test.html#test-vocacional">Test Vocacional</a>
+            <a href="#" class="nav-button active">⭐ Perfiles de Egreso</a>
+            <button class="nav-button primary" onclick="openLoginModal()">Iniciar Sesión</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="carreras" class="careers-list-section">
+            <h2>🎓 Especialidades Técnicas (Perfiles de Egreso)</h2>
+            <p>Haz clic en cada carrera para ver la descripción detallada, las habilidades que desarrollarás y los proyectos que realizarás.</p>
+            
+            <div class="career-grid detail-view">
+                <div class="detail-card" onclick="openCareerModal('programacion')">
+                    <h3>💻 Programación</h3>
+                    <p>Desarrollo web, apps y bases de datos.</p>
+                    <span class="material-icons">arrow_forward</span>
+                </div>
+
+                <div class="detail-card" onclick="openCareerModal('mecanica')">
+                    <h3>⚙️ Mecánica Industrial</h3>
+                    <p>Mantenimiento, CNC y diseño mecánico.</p>
+                    <span class="material-icons">arrow_forward</span>
+                </div>
+
+                <div class="detail-card" onclick="openCareerModal('alimentos')">
+                    <h3>🍽️ Alimentos y Bebidas</h3>
+                    <p>Inocuidad, formulación y control de calidad.</p>
+                    <span class="material-icons">arrow_forward</span>
+                </div>
+
+                <div class="detail-card" onclick="openCareerModal('soporte')">
+                    <h3>🖥️ Soporte y Mantenimiento</h3>
+                    <p>Redes, servidores y reparación de equipos.</p>
+                    <span class="material-icons">arrow_forward</span>
+                </div>
+
+                <div class="detail-card" onclick="openCareerModal('contabilidad')">
+                    <h3>💼 Contabilidad</h3>
+                    <p>Fiscal, finanzas, nóminas y auditoría.</p>
+                    <span class="material-icons">arrow_forward</span>
+                </div>
+
+                <div class="detail-card" onclick="openCareerModal('hospedaje')">
+                    <h3>🏨 Hospedaje</h3>
+                    <p>Administración hotelera y eventos MICE.</p>
+                    <span class="material-icons">arrow_forward</span>
+                </div>
+
+                <div class="detail-card" onclick="openCareerModal('ia')">
+                    <h3>🧠 Inteligencia Artificial</h3>
+                    <p>Machine Learning, Deep Learning y Big Data.</p>
+                    <span class="material-icons">arrow_forward</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Copiado: Test Vocacional -->
+        <section class="section" id="test-vocacional">
+            <h2 class="section-title">🎯 Test Vocacional: ¿Qué carrera es para ti?</h2>
+            <p class="test-intro">Descubre qué carrera se adapta mejor a tus habilidades e intereses. Selecciona las áreas que más te gustan:</p>
+            
+            <div class="test-container">
+                <div class="test-options">
+                    <div class="test-card" data-skills="programacion,ia,robotica,soporte">
+                        <div class="test-icon">💻</div>
+                        <h3>Tecnología y Computación</h3>
+                        <p>Te gusta la tecnología, las computadoras y resolver problemas lógicos</p>
+                    </div>
+
+                    <div class="test-card" data-skills="mecanica,robotica">
+                        <div class="test-icon">🔧</div>
+                        <h3>Ingeniería y Mecánica</h3>
+                        <p>Disfrutas construir cosas, trabajar con herramientas y entender cómo funcionan las máquinas</p>
+                    </div>
+
+                    <div class="test-card" data-skills="alimentos">
+                        <div class="test-icon">🔬</div>
+                        <h3>Ciencias y Laboratorio</h3>
+                        <p>Te interesan los experimentos, la química y el análisis científico</p>
+                    </div>
+
+                    <div class="test-card" data-skills="contabilidad,hospedaje">
+                        <div class="test-icon">💼</div>
+                        <h3>Negocios y Administración</h3>
+                        <p>Te gustan los números, organizar y gestionar recursos</p>
+                    </div>
+
+                    <div class="test-card" data-skills="hospedaje">
+                        <div class="test-icon">👥</div>
+                        <h3>Servicio y Atención al Cliente</h3>
+                        <p>Disfrutas ayudar a las personas y trabajar en equipo</p>
+                    </div>
+
+                    <div class="test-card" data-skills="ia,programacion">
+                        <div class="test-icon">🤖</div>
+                        <h3>Inteligencia Artificial y Datos</h3>
+                        <p>Te fascina la IA, el análisis de datos y las nuevas tecnologías</p>
+                    </div>
+                </div>
+
+                <div class="test-results" id="testResults" style="display: none;">
+                    <h3>Carreras recomendadas para ti:</h3>
+                    <div id="recommendedCareers"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="careerModal" class="modal">
+        <div class="modal-content large" id="careerModalContent">
+            </div>
+    </div>
+    
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeLoginModal()">&times;</span>
+            <h2>🔑 Iniciar Sesión (Alumnos)</h2>
+            <form id="loginForm" onsubmit="handleLogin(event)">
+                <label for="controlNumber">Número de Control (8 dígitos)</label>
+                <input type="number" id="controlNumber" required minlength="8" maxlength="8">
+                <p id="controlError" class="error-message">Debe ser un número de control de 8 dígitos.</p>
+
+                <label for="email">Correo Institucional</label>
+                <input type="email" id="email" required placeholder="tu.nombre@cbtis258.edu.mx">
+                <p id="emailError" class="error-message">Debe ser un correo con dominio @cbtis258.edu.mx.</p>
+                
+                <button type="submit" class="primary-button">Acceder al Portal</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
