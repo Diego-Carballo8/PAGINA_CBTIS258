@@ -7,7 +7,16 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <!-- Header con Banner -->
+    <div class="header-banner">
+        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1200&h=400&fit=crop" alt="Estudiantes CBTis">
+        <div class="banner-overlay">
+            <div class="banner-content">
+                <h1>CBTis 258</h1>
+                <p>Formando profesionales técnicos de excelencia</p>
+            </div>
+        </div>
+    </div>
 
     <!-- Header -->
     <header class="header">
@@ -28,7 +37,7 @@
         <div class="nav-container">
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
-                <li><a href="test.html#test-vocacional">Test Vocacional</a></li>
+                <li><a href="#test-vocacional">Test Vocacional</a></li>
                 <li><a href="#oferta">Oferta Educativa</a></li>
                 <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#contacto">Contacto</a></li>
@@ -40,10 +49,99 @@
     <section class="hero" id="inicio">
         <h2>Formando el Futuro Tecnológico</h2>
         <p>Excelencia académica y preparación profesional</p>
-        <a href="test.html#test-vocacional" class="cta-button">¿No sabes qué carrera elegir? Haz nuestro test</a>
+        <a href="test.html" class="cta-button">¿No sabes qué carrera elegir? Haz nuestro test</a>
     </section>
 
-    <!-- Test Vocacional movido a test.html -->
+    <!-- Test Vocacional -->
+    <section class="section" id="test-vocacional">
+        <h2 class="section-title">🎯 Test Vocacional: ¿Qué carrera es para ti?</h2>
+        <p class="test-intro">Descubre qué carrera se adapta mejor a tus habilidades e intereses. Selecciona las áreas que más te gustan:</p>
+        
+        <div class="test-container">
+            <div class="test-options">
+                <div class="test-card" data-skills="programacion,ia,robotica,soporte">
+                    <div class="test-icon">💻</div>
+                    <h3>Tecnología y Computación</h3>
+                    <p>Te gusta la tecnología, las computadoras y resolver problemas lógicos</p>
+                </div>
+
+                <div class="test-card" data-skills="mecanica,robotica">
+                    <div class="test-icon">🔧</div>
+                    <h3>Ingeniería y Mecánica</h3>
+                    <p>Disfrutas construir cosas, trabajar con herramientas y entender cómo funcionan las máquinas</p>
+                </div>
+
+                <div class="test-card" data-skills="alimentos">
+                    <div class="test-icon">🔬</div>
+                    <h3>Ciencias y Laboratorio</h3>
+                    <p>Te interesan los experimentos, la química y el análisis científico</p>
+                </div>
+
+                <div class="test-card" data-skills="contabilidad,hospedaje">
+                    <div class="test-icon">💼</div>
+                    <h3>Negocios y Administración</h3>
+                    <p>Te gustan los números, organizar y gestionar recursos</p>
+                </div>
+
+                <div class="test-card" data-skills="hospedaje">
+                    <div class="test-icon">👥</div>
+                    <h3>Servicio y Atención al Cliente</h3>
+                    <p>Disfrutas ayudar a las personas y trabajar en equipo</p>
+                </div>
+
+                <div class="test-card" data-skills="ia,programacion">
+                    <div class="test-icon">🤖</div>
+                    <h3>Inteligencia Artificial y Datos</h3>
+                    <p>Te fascina la IA, el análisis de datos y las nuevas tecnologías</p>
+                </div>
+            </div>
+
+            <div class="test-results" id="testResults" style="display: none;">
+                <h3>Carreras recomendadas para ti:</h3>
+                <div id="recommendedCareers"></div>
+            </div>
+        </div>
+
+        <!-- Tierlist de Conocimientos -->
+        <div class="tierlist-container">
+            <h3>📊 Nivel de Habilidades Requeridas por Carrera</h3>
+            <p class="tierlist-subtitle">¿Cuánto necesitas saber antes de empezar? (Todos pueden aprender desde cero)</p>
+            
+            <div class="tier">
+                <div class="tier-label tier-s">S - Para los que ya tienen experiencia</div>
+                <div class="tier-content">
+                    <span class="tier-item">Inteligencia Artificial 🧠</span>
+                    <span class="tier-item">Robótica 🤖</span>
+                </div>
+            </div>
+
+            <div class="tier">
+                <div class="tier-label tier-a">A - Conocimientos intermedios ayudan</div>
+                <div class="tier-content">
+                    <span class="tier-item">Programación 💻</span>
+                    <span class="tier-item">Mecánica Industrial ⚙️</span>
+                </div>
+            </div>
+
+            <div class="tier">
+                <div class="tier-label tier-b">B - Algunos conocimientos básicos</div>
+                <div class="tier-content">
+                    <span class="tier-item">Soporte y Mantenimiento 🖥️</span>
+                    <span class="tier-item">Contabilidad 💼</span>
+                    <span class="tier-item">Alimentos y Bebidas 🍽️</span>
+                </div>
+            </div>
+
+            <div class="tier">
+                <div class="tier-label tier-c">C - Puedes empezar desde cero</div>
+                <div class="tier-content">
+                    <span class="tier-item">Hospedaje 🏨</span>
+                </div>
+            </div>
+
+            <p class="tierlist-note">📌 Nota: Todas las carreras te enseñan desde lo básico. Esta clasificación solo indica qué tanto puede ayudarte tener conocimientos previos.</p>
+        </div>
+    </section>
 
     <!-- Oferta Educativa -->
     <section class="section" id="oferta">
@@ -208,10 +306,10 @@
     <section class="section" id="contacto">
         <h2 class="section-title">Contacto</h2>
         <div class="contact-info">
-            <p><strong>📍 Dirección:</strong> GRAL. ESCOBEDO, Nuevo León, México</p>
-            <p><strong>📧 Email:</strong> @cbtis258.edu.mx</p>
-            <p><strong>📞 Teléfono:</strong> (81) pendiente </p>
-            <p><strong>🕒 Horario:</strong> Lunes a Viernes, 7:00 AM - 8:00 PM</p>
+            <p><strong>📍 Dirección:</strong> Ciudad Apodaca, Nuevo León, México</p>
+            <p><strong>📧 Email:</strong> contacto@cbtis258.edu.mx</p>
+            <p><strong>📞 Teléfono:</strong> (81) XXXX-XXXX</p>
+            <p><strong>🕒 Horario:</strong> Lunes a Viernes, 7:00 AM - 3:00 PM</p>
         </div>
     </section>
 
@@ -257,7 +355,7 @@
     <!-- Footer -->
     <footer class="footer">
         <p>&copy; 2024 CBTis 258 - Centro de Bachillerato Tecnológico Industrial y de Servicios</p>
-        <p>Calle Plinio Ordoñez 801, Hacienda del Topo 66072, Gral. Escobedo, N.L Mexico</p>
+        <p>Ciudad Apodaca, Nuevo León, México</p>
     </footer>
 
     <script src="script.js"></script>
