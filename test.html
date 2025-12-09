@@ -3,148 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CBTis 258 - Perfiles de Egreso</title>
+    <title>CBTis 258 - Tests Vocacionales</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-
-    <header class="main-header">
-        <h1>CBTis 258</h1>
-        <nav>
-            <a href="index.html#inicio">Inicio</a>
-            <a href="test.html#test-vocacional">Test Vocacional</a>
-            <a href="#" class="nav-button active">⭐ Perfiles de Egreso</a>
-            <button class="nav-button primary" onclick="openLoginModal()">Iniciar Sesión</button>
-        </nav>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="logo-section">
+                <div class="logo">CB</div>
+                <div class="school-info">
+                    <h2>CBTis 258</h2>
+                    <p>Centro de Bachillerato Tecnológico Industrial y de Servicios</p>
+                </div>
+            </div>
+            <button class="login-btn" onclick="openLoginModal()">Portal Estudiantil</button>
+        </div>
     </header>
 
-    <main>
-        <section id="carreras" class="careers-list-section">
-            <h2>🎓 Especialidades Técnicas (Perfiles de Egreso)</h2>
-            <p>Haz clic en cada carrera para ver la descripción detallada, las habilidades que desarrollarás y los proyectos que realizarás.</p>
-            
-            <div class="career-grid detail-view">
-                <div class="detail-card" onclick="openCareerModal('programacion')">
-                    <h3>💻 Programación</h3>
-                    <p>Desarrollo web, apps y bases de datos.</p>
-                    <span class="material-icons">arrow_forward</span>
-                </div>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <ul>
+                <li><a href="index.html#inicio">Inicio</a></li>
+                <li><a href="#tests">Tests Vocacionales</a></li>
+                <li><a href="index.html#oferta">Oferta Educativa</a></li>
+                <li><a href="index.html#servicios">Servicios</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
 
-                <div class="detail-card" onclick="openCareerModal('mecanica')">
-                    <h3>⚙️ Mecánica Industrial</h3>
-                    <p>Mantenimiento, CNC y diseño mecánico.</p>
-                    <span class="material-icons">arrow_forward</span>
-                </div>
+    <!-- Hero Section -->
+    <section class="hero" id="tests">
+        <h2>Tests Vocacionales CBTis 258</h2>
+        <p>Descubre qué carrera es perfecta para ti</p>
+    </section>
 
-                <div class="detail-card" onclick="openCareerModal('alimentos')">
-                    <h3>🍽️ Alimentos y Bebidas</h3>
-                    <p>Inocuidad, formulación y control de calidad.</p>
-                    <span class="material-icons">arrow_forward</span>
-                </div>
-
-                <div class="detail-card" onclick="openCareerModal('soporte')">
-                    <h3>🖥️ Soporte y Mantenimiento</h3>
-                    <p>Redes, servidores y reparación de equipos.</p>
-                    <span class="material-icons">arrow_forward</span>
-                </div>
-
-                <div class="detail-card" onclick="openCareerModal('contabilidad')">
-                    <h3>💼 Contabilidad</h3>
-                    <p>Fiscal, finanzas, nóminas y auditoría.</p>
-                    <span class="material-icons">arrow_forward</span>
-                </div>
-
-                <div class="detail-card" onclick="openCareerModal('hospedaje')">
-                    <h3>🏨 Hospedaje</h3>
-                    <p>Administración hotelera y eventos MICE.</p>
-                    <span class="material-icons">arrow_forward</span>
-                </div>
-
-                <div class="detail-card" onclick="openCareerModal('ia')">
-                    <h3>🧠 Inteligencia Artificial</h3>
-                    <p>Machine Learning, Deep Learning y Big Data.</p>
-                    <span class="material-icons">arrow_forward</span>
-                </div>
-
+    <!-- Test Selection -->
+    <section class="section">
+        <h2 class="section-title">Elige tu Test</h2>
+        <div class="test-selection-grid">
+            <!-- Test 1: Examen de Conocimientos -->
+            <div class="test-type-card">
+                <div class="test-icon-big">📝</div>
+                <h3>Test de Conocimientos Generales</h3>
+                <p>50 preguntas sobre diferentes áreas técnicas. Demuestra lo que sabes y te recomendaremos la carrera ideal según tus conocimientos.</p>
+                <ul class="test-features">
+                    <li>✓ 50 preguntas de opción múltiple</li>
+                    <li>✓ Matemáticas, tecnología, ciencias y más</li>
+                    <li>✓ Duración: 30-40 minutos</li>
+                    <li>✓ Recomendación basada en tus aciertos</li>
+                </ul>
+                <button class="test-btn primary" onclick="startKnowledgeTest()">Iniciar Test de Conocimientos</button>
             </div>
-        </section>
 
-        <!-- Copiado: Test Vocacional -->
-        <section class="section" id="test-vocacional">
-            <h2 class="section-title">🎯 Test Vocacional: ¿Qué carrera es para ti?</h2>
-            <p class="test-intro">Descubre qué carrera se adapta mejor a tus habilidades e intereses. Selecciona las áreas que más te gustan:</p>
-            
-            <div class="test-container">
-                <div class="test-options">
-                    <div class="test-card" data-skills="programacion,ia,robotica,soporte">
-                        <div class="test-icon">💻</div>
-                        <h3>Tecnología y Computación</h3>
-                        <p>Te gusta la tecnología, las computadoras y resolver problemas lógicos</p>
-                    </div>
+            <!-- Test 2: Tests de Confirmación por Carrera -->
+            <div class="test-type-card">
+                <div class="test-icon-big">✅</div>
+                <h3>Test de Confirmación de Carrera</h3>
+                <p>¿Ya sabes qué carrera quieres? Haz 20 preguntas de Sí/No para confirmar si realmente es para ti.</p>
+                <ul class="test-features">
+                    <li>✓ 20 preguntas Sí/No por carrera</li>
+                    <li>✓ Evalúa tu afinidad real</li>
+                    <li>✓ Duración: 5-10 minutos</li>
+                    <li>✓ Porcentaje de compatibilidad</li>
+                </ul>
+                <button class="test-btn primary" onclick="showCareerSelection()">Elegir Carrera y Hacer Test</button>
+            </div>
+        </div>
+    </section>
 
-                    <div class="test-card" data-skills="mecanica,robotica">
-                        <div class="test-icon">🔧</div>
-                        <h3>Ingeniería y Mecánica</h3>
-                        <p>Disfrutas construir cosas, trabajar con herramientas y entender cómo funcionan las máquinas</p>
-                    </div>
-
-                    <div class="test-card" data-skills="alimentos">
-                        <div class="test-icon">🔬</div>
-                        <h3>Ciencias y Laboratorio</h3>
-                        <p>Te interesan los experimentos, la química y el análisis científico</p>
-                    </div>
-
-                    <div class="test-card" data-skills="contabilidad,hospedaje">
-                        <div class="test-icon">💼</div>
-                        <h3>Negocios y Administración</h3>
-                        <p>Te gustan los números, organizar y gestionar recursos</p>
-                    </div>
-
-                    <div class="test-card" data-skills="hospedaje">
-                        <div class="test-icon">👥</div>
-                        <h3>Servicio y Atención al Cliente</h3>
-                        <p>Disfrutas ayudar a las personas y trabajar en equipo</p>
-                    </div>
-
-                    <div class="test-card" data-skills="ia,programacion">
-                        <div class="test-icon">🤖</div>
-                        <h3>Inteligencia Artificial y Datos</h3>
-                        <p>Te fascina la IA, el análisis de datos y las nuevas tecnologías</p>
-                    </div>
+    <!-- Career Selection Modal (for confirmation test) -->
+    <div class="modal" id="careerSelectionModal">
+        <div class="modal-content modal-large">
+            <button class="close-btn" onclick="closeCareerSelection()">✕</button>
+            <h2 class="modal-title">Selecciona una Carrera para Evaluar</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 2rem;">
+                Elige la carrera que te interesa y responde 20 preguntas para saber si es la indicada para ti
+            </p>
+            <div class="career-selection-grid">
+                <div class="career-select-card" onclick="startConfirmationTest('programacion')">
+                    <div class="career-icon">💻</div>
+                    <h3>Programación</h3>
                 </div>
-
-                <div class="test-results" id="testResults" style="display: none;">
-                    <h3>Carreras recomendadas para ti:</h3>
-                    <div id="recommendedCareers"></div>
+                <div class="career-select-card" onclick="startConfirmationTest('mecanica')">
+                    <div class="career-icon">⚙️</div>
+                    <h3>Mecánica Industrial</h3>
+                </div>
+                <div class="career-select-card" onclick="startConfirmationTest('alimentos')">
+                    <div class="career-icon">🍽️</div>
+                    <h3>Alimentos y Bebidas</h3>
+                </div>
+                <div class="career-select-card" onclick="startConfirmationTest('soporte')">
+                    <div class="career-icon">🖥️</div>
+                    <h3>Soporte y Mantenimiento</h3>
+                </div>
+                <div class="career-select-card" onclick="startConfirmationTest('contabilidad')">
+                    <div class="career-icon">💼</div>
+                    <h3>Contabilidad</h3>
+                </div>
+                <div class="career-select-card" onclick="startConfirmationTest('hospedaje')">
+                    <div class="career-icon">🏨</div>
+                    <h3>Hospedaje</h3>
+                </div>
+                <div class="career-select-card" onclick="startConfirmationTest('robotica')">
+                    <div class="career-icon">🤖</div>
+                    <h3>Robótica</h3>
+                </div>
+                <div class="career-select-card" onclick="startConfirmationTest('ia')">
+                    <div class="career-icon">🧠</div>
+                    <h3>Inteligencia Artificial</h3>
                 </div>
             </div>
-        </section>
-    </main>
-
-    <div id="careerModal" class="modal">
-        <div class="modal-content large" id="careerModalContent">
-            </div>
+        </div>
     </div>
-    
-    <div id="loginModal" class="modal">
-        <div class="modal-content">
-            <span class="close-button" onclick="closeLoginModal()">&times;</span>
-            <h2>🔑 Iniciar Sesión (Alumnos)</h2>
-            <form id="loginForm" onsubmit="handleLogin(event)">
-                <label for="controlNumber">Número de Control (8 dígitos)</label>
-                <input type="number" id="controlNumber" required minlength="8" maxlength="8">
-                <p id="controlError" class="error-message">Debe ser un número de control de 8 dígitos.</p>
 
-                <label for="email">Correo Institucional</label>
-                <input type="email" id="email" required placeholder="tu.nombre@cbtis258.edu.mx">
-                <p id="emailError" class="error-message">Debe ser un correo con dominio @cbtis258.edu.mx.</p>
-                
-                <button type="submit" class="primary-button">Acceder al Portal</button>
+    <!-- Test Container -->
+    <div class="modal" id="testModal">
+        <div class="modal-content modal-xlarge">
+            <button class="close-btn" onclick="closeTest()">✕</button>
+            
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <div class="progress-bar" id="testProgressBar"></div>
+                <p class="progress-text">
+                    Pregunta <span id="currentQuestionNum">1</span> de <span id="totalQuestionsNum">50</span>
+                </p>
+            </div>
+
+            <!-- Test Content -->
+            <div id="testContent"></div>
+
+            <!-- Navigation -->
+            <div class="test-navigation">
+                <button class="test-btn secondary" id="testPrevBtn" onclick="previousTestQuestion()" style="display: none;">
+                    ← Anterior
+                </button>
+                <button class="test-btn primary" id="testNextBtn" onclick="nextTestQuestion()">
+                    Siguiente →
+                </button>
+                <button class="test-btn success" id="testFinishBtn" onclick="finishCurrentTest()" style="display: none;">
+                    Ver Resultados 🎓
+                </button>
+            </div>
+
+            <!-- Results -->
+            <div id="testResults" style="display: none;"></div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeLoginModal()">✕</button>
+            <h2 class="modal-title">Portal Estudiantil</h2>
+            <form id="loginForm" onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label for="controlNumber">Número de Control</label>
+                    <input 
+                        type="text" 
+                        id="controlNumber" 
+                        placeholder="Ej: 20240001"
+                        required
+                    >
+                    <span class="error" id="controlError">Número de control inválido (8 dígitos)</span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Institucional</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        placeholder="ejemplo@cbtis258.edu.mx"
+                        required
+                    >
+                    <span class="error" id="emailError">Debe usar correo @cbtis258.edu.mx</span>
+                </div>
+                <button type="submit" class="submit-btn">Iniciar Sesión</button>
             </form>
         </div>
     </div>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 CBTis 258 - Centro de Bachillerato Tecnológico Industrial y de Servicios</p>
+        <p>Calle Plinio Ordoñez 801, Hacienda del Topo 66072, Gral. Escobedo, N.L Mexico</p>
+    </footer>
+
     <script src="script.js"></script>
+    <script src="test.js"></script>
 </body>
 </html>
