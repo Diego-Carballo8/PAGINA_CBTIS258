@@ -222,23 +222,17 @@ let selectedInterests = new Set();
 
 document.addEventListener('DOMContentLoaded', function() {
     const testCards = document.querySelectorAll('.test-card');
-    // Si la página no contiene tarjetas del test, no hacemos nada
-    if (testCards && testCards.length > 0) {
-        testCards.forEach(card => {
-            card.addEventListener('click', function() {
-                this.classList.toggle('selected');
-                updateRecommendations();
-            });
+    
+    testCards.forEach(card => {
+        card.addEventListener('click', function() {
+            this.classList.toggle('selected');
+            updateRecommendations();
         });
-    }
+    });
 });
 
 function updateRecommendations() {
     const selectedCards = document.querySelectorAll('.test-card.selected');
-    const resultsDiv = document.getElementById('testResults');
-    const careersDiv = document.getElementById('recommendedCareers');
-    // Si no existe la sección de resultados del test omitimos la ejecución
-    if (!resultsDiv || !careersDiv) return;
     const allSkills = new Set();
     
     selectedCards.forEach(card => {
@@ -264,7 +258,8 @@ function updateRecommendations() {
     
     const recommendations = Array.from(allSkills).map(skill => careerMapping[skill]);
     
-    // resultsDiv y careersDiv ya definidos arriba
+    const resultsDiv = document.getElementById('testResults');
+    const careersDiv = document.getElementById('recommendedCareers');
     
     careersDiv.innerHTML = recommendations.map(career => 
         `<div style="background: var(--primary-red); color: white; padding: 1rem; margin: 0.5rem; border-radius: 8px; display: inline-block; font-weight: bold;">
